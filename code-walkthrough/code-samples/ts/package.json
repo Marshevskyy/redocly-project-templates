@@ -1,0 +1,25 @@
+// @chunk {"steps": ["create-package-json"]}
+{
+  "name": "input-validation-example",
+  "version": "1.0.0",
+  "description": "Example of input validation",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsx index.ts"
+  },
+  "dependencies": {
+    // @chunk {"when": {"validation": "Zod"}}
+    "zod": "^3.22.4"
+    // @chunk-end
+    // @chunk {"when": {"validation": "Yup"}}
+    "yup": "^1.3.3"
+    // @chunk-end
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "typescript": "^5.3.3",
+    "tsx": "4.20.3"
+  }
+} 
+// @chunk-end 

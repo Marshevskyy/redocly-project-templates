@@ -1,0 +1,4 @@
+ignore:
+  - 'code-samples'
+  - './code-samples'
+  - './README.md'
