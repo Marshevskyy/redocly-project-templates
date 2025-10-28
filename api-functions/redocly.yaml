@@ -1,0 +1,14 @@
+ignore:
+  - .github
+# rbac:
+  # content: 
+    #'@api/redirects.ts': # limit access for the file and corresponding endpoint (by file path)
+    #  TeamA: read # TeamA has access to the /api/hello endpoint
+    #'@api/users/[id].ts': # limit access to the users endpoint by file path
+    #  Admins: read
+    #  Editors: read
+    # '/api/env': # limit access to the environment variables example by URL
+    #  Admins: read
+apiFunctions:
+  folders:
+    - /custom-api/
