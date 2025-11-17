@@ -1,0 +1,13 @@
+extends:
+  - recommended
+rules:
+  no-server-example.com: off
+reunite:
+  jobs:
+    - path: 'museum.arazzo.yaml'
+      agent: respect
+      trigger:
+        event: schedule
+        interval: 1m
+      servers:
+        openapi: '{{ process.env.PROJECT_URL }}'

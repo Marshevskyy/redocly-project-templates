@@ -1,0 +1,26 @@
+name: Redocly CLI Commands
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  redocly_commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "22" # Or your preferred Node.js version
+
+      - name: Install wait-on
+        run: npm install -g wait-on
+
+      - name: Run Redocly Commands
+        run: |
+          npx @redocly/cli preview & 
+          wait-on tcp:4000 && npx @redocly/cli respect museum.arazzo.yaml

@@ -1,0 +1,6 @@
+default:
+  inputs: {}
+  servers:
+    openapi.yaml:
+      value: http://localhost:4000/api
+      variables: {}
